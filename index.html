@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Finance</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Control Finance - Seu controle financeiro">
+
+    <link rel="stylesheet" href="/styles/buttons.css">
+    <link rel="stylesheet" href="/styles/colors.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/flex.css">
+    <link rel="stylesheet" href="/styles/globalStyles.css">
+    <link rel="stylesheet" href="/pages/home/index.css">
+</head>
+<body>
+    <main class="" id="app ">
+
+        <nav class=" navbar bg-color-grey-5 flex items-center">
+            <div class="container navbar-container flex  justify-between ">
+                <div class="navbar-logo"><img src="/assets/Control Finance.svg" alt=""></div>
+                <div class="navbar-items"><button class="btn-register-new-value btn-standard bg-color-brand-1 text-color-white btn-primary">Registrar novo valor</button></div>
+            </div>
+        </nav>
+
+        <section class="container section-financial-summary flex justify-between items-center">
+            <div class="section-financial-summary-title "><h2>Resumo Financeiro</h2></div>
+            <div class="section-financial-summary-buttons">
+                <button class="btn-standard text-color-grey-2 bg-color-white btn-outline" id="btn-section-financial-all">Todos</button>
+                <button class="btn-standard text-color-grey-2 bg-color-white btn-outline" id="btn-section-financial-money-entries">Entradas</button>
+                <button class="btn-standard text-color-grey-2 bg-color-white btn-outline" id="btn-section-financial-money-out">Saídas</button>
+            </div>
+        </section>
+
+        <section class="container section-sum-of-values flex justify-between items-center bg-color-grey-5">
+            <div class="section-sum-of-values-title">Soma dos Valores</div>
+            <div class="" id="section-sum-of-values-textsum">R$ 2.120,00</div>
+        </section>
+
+        <section class="container section-list-of-values">
+            <ul class="container list-of-values flex flex-col">
+                <li class="list-of-values-items flex justify-between items-center">
+                    <div class="list-of-values-items-value">
+                        <p class="list-of-values-items-value-text">R$40,00</p>
+                    </div>
+                    <div class="list-of-values-items-buttons">
+                        <button class="list-of-values-btn-entries-or-out btn-standard btn-greylow bg-color-grey-5">Entrada</button>
+                        <button><img src="/assets/trash.svg" alt=""></button>
+                    </div>
+                </li>
+     
+            </ul>
+        </section>
+
+
+    </main>
+    <script src="/scripts/modal.js"></script>
+    <script src="/pages/home/valuesData.js"></script>
+    <script src="/pages/home/index.js"></script>
+</body>
+</html>
