@@ -3,7 +3,7 @@ function createItemList (indexArray, currentFilter){
     
         let li = document.createElement("li")
         ul.appendChild(li)
-        li.classList = "list-of-values-items flex justify-between items-center"
+        li.classList = "list-of-values-items flex justify-between items-center text-color-grey-1 font-line-height-1 font-size-3 font-weight-2"
 
             let divItemsValue = document.createElement("div")
             li.appendChild(divItemsValue)
@@ -80,12 +80,12 @@ function createListVoid (filterText){
                
                 let h3 = document.createElement("h3")
                 divBody.appendChild(h3)
-                h3.classList = "list-of-values-void-body-title-up"
+                h3.classList = "list-of-values-void-body-title-up text-color-grey-1 font-size-2 font-weight-1 font-line-height-1"
                 h3.innerText = filterText
 
                 let h4 = document.createElement("h4")
                 divBody.appendChild(h4)
-                h4.classList = "list-of-values-void-body-title-down"
+                h4.classList = "list-of-values-void-body-title-down text-color-grey-2 font-size-3 font-weight-2 font-line-height-1"
                 h4.innerText = "Registrar novo valor"
 
 
