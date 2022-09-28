@@ -267,8 +267,19 @@ function registerItem (){
 
 
     btnCancel.addEventListener("click", function(){
-            typeOfEntry=null
+        // limpando o input do modal sempre que o modal for fechado
             input.value=""
+        // limpando a seleção do tipo de valor ao fechar o modal
+            if (btnEntry.classList[4]==="btn-outline-activated"){
+                btnEntry.classList.toggle("btn-outline-activated")
+            }
+            if (btnOut.classList[4]==="btn-outline-activated"){
+                btnOut.classList.toggle("btn-outline-activated")
+            }
+            // voltando para default os valores das variaveis que são utilizadas na logica de seleção do tipo de entrada
+                typeOfEntry = null
+                ClickBtnEntry = false
+                ClickBtnOut = false
     })
 
      
