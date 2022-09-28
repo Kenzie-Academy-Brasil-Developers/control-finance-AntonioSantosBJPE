@@ -344,8 +344,6 @@ function deleteButtonsfilters (){
 
 window.addEventListener ("DOMContentLoaded", function(){
     renderArray(2)
-    // createButtonsfilters (2) 
-   //createEventFilters () // essa linha vai morrer ao criar os buttons de filtro no DOM
     eventShowCloseModal ()
     registerItem ()
 })

@@ -59,9 +59,13 @@
                     <div class="modal-description text-color-grey-2">
                         <p>Digite o valor e em seguida aperte no botão referente ao tipo do valor </p>
                     </div>
-                    <div class="modal-input-value">
+                    <div class="modal-input-value flex flex-col">
                         <h4 class="modal-input-value-label text-color-grey-">Valor</h4>
-                        <input class="modal-input-value-input" type="number" id="modal-input">
+
+                        <label for="modal-input" class="modal-input-label">
+                            R$ <input class="modal-input-value-input" type="number" id="modal-input" name="modal-input" placeholder="00.00">
+                        </label>
+  
                     </div>
                     <div class="modal-value-type flex items-center">
                         <h4 class="modal-value-type-title">Tipo de Valor</h4>

@@ -55,11 +55,32 @@
     }
 
     .modal-input-value-input{
+        width: 85%;
+        /* height: 44px; */
+        /* border: 1.5px solid var(--color-grey-3); */
+        /* border-radius: var(--radius-1); */
+        border: none;
+        outline: none;
+        font-size: var(--font-size-3);
+        font-weight: var(--font-weight-3);
+        line-height: var(--font-line-height-1);
+        color: var(--color-grey-2);
+    }
+
+   
+
+    .modal-input-label{
+        margin-top: 10px;
+        width: 300px;
         width: 100%;
-        height: 44px;
+        padding: 12px 0;
+        padding-left: 5%;
         border: 1.5px solid var(--color-grey-3);
         border-radius: var(--radius-1);
-        outline: none;
+        font-size: var(--font-size-3);
+        font-weight: var(--font-weight-2);
+        line-height: var(--font-line-height-1);
+        color: var(--color-grey-2);
     }
 
 .modal-value-type{
