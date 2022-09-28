@@ -34,7 +34,7 @@ function createItemList (indexArray, currentFilter){
 
                     let imgDelete = document.createElement("img")
                     buttonDelete.appendChild(imgDelete)
-                    imgDelete.src = "/assets/trash.svg"
+                    imgDelete.src = "./assets/trash.svg"
 
                         buttonDelete.addEventListener("click", function(){
                             
