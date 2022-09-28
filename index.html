@@ -7,12 +7,11 @@
     <title>Control Finance</title>
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <meta name="description" content="Control Finance - Seu controle financeiro">
-
+    <link rel="stylesheet" href="/styles/flex.css">
     <link rel="stylesheet" href="/styles/buttons.css">
     <link rel="stylesheet" href="/styles/colors.css">
-    <link rel="stylesheet" href="/styles/modal.css">
     <link rel="stylesheet" href="/styles/navbar.css">
-    <link rel="stylesheet" href="/styles/flex.css">
+    <link rel="stylesheet" href="/styles/modal.css">
     <link rel="stylesheet" href="/styles/globalStyles.css">
     <link rel="stylesheet" href="/pages/home/index.css">
 </head>
@@ -22,7 +21,7 @@
         <nav class=" navbar bg-color-grey-5 flex items-center">
             <div class="container navbar-container flex  justify-between ">
                 <div class="navbar-logo"><img src="/assets/Control Finance.svg" alt=""></div>
-                <div class="navbar-items"><button class="btn-register-new-value btn-standard bg-color-brand-1 text-color-white btn-primary">Registrar novo valor</button></div>
+                <div class="navbar-items"><button class="btn-register-new-value btn-standard bg-color-brand-1 text-color-white btn-primary" id="btn-register-new-value">Registrar novo valor</button></div>
             </div>
         </nav>
 
@@ -37,26 +36,56 @@
 
         <section class="container section-sum-of-values flex justify-between items-center bg-color-grey-5">
             <div class="section-sum-of-values-title">Soma dos Valores</div>
-            <div class="" id="section-sum-of-values-textsum">R$ 2.120,00</div>
+            <div class="" id="section-sum-of-values-textsum">R$ 0.00</div>
         </section>
 
         <section class="container section-list-of-values">
-            <ul class="container list-of-values flex flex-col">
-                <li class="list-of-values-items flex justify-between items-center">
-                    <div class="list-of-values-items-value">
-                        <p class="list-of-values-items-value-text">R$40,00</p>
-                    </div>
-                    <div class="list-of-values-items-buttons">
-                        <button class="list-of-values-btn-entries-or-out btn-standard btn-greylow bg-color-grey-5">Entrada</button>
-                        <button><img src="/assets/trash.svg" alt=""></button>
-                    </div>
-                </li>
-     
-            </ul>
+                    
+                <!-- Criado Via DOM -->    
+            <!-- <div class="container list-of-values-void  ">
+                <div class="list-of-values-void-body flex flex-col justify-around items-center">
+                    <h3 class="list-of-values-void-body-title-up"></h3>
+                    <h4 class="list-of-values-void-body-title-down">Registrar novo valor</h4>
+                </div>
+            </div> -->
         </section>
 
 
     </main>
+
+    <div class="modal-wrap-app">
+
+        <div class="modal-register-new-value flex  flex-col  justify-center">
+            
+            <div class="modal container flex flex-col justify-around">
+                    
+                    <div class="modal-header flex justify-between  items-center">
+                        <h3 class="modal-header-title text-color-grey-1">Registro de valor</h3>
+                        <button class="btn-standard bg-color-grey-5 text-color-grey-2 btn-modal-close" id="btn-modal-close">X</button>
+                    </div>
+                    <div class="modal-description text-color-grey-2">
+                        <p>Digite o valor e em seguida aperte no botão referente ao tipo do valor </p>
+                    </div>
+                    <div class="modal-input-value">
+                        <h4 class="modal-input-value-label text-color-grey-">Valor</h4>
+                        <input class="modal-input-value-input" type="number" id="modal-input">
+                    </div>
+                    <div class="modal-value-type flex items-center">
+                        <h4 class="modal-value-type-title">Tipo de Valor</h4>
+                        <button class="btn-standard text-color-grey-2 bg-color-white btn-outline" id="btn-value-type-entry">Entrada</button>
+                        <button class="btn-standard text-color-grey-2 bg-color-white btn-outline" id="btn-value-type-out">Saída</button>
+                    </div> 
+                    <div class="modal-buttons flex justify-end">
+                        <button class="btn-standard text-color-grey-2 bg-color-grey-4 btn-greylow btn-modal-cancel">Cancelar</button>
+                        <button class="btn-standard btn-primary text-color-white bg-color-brand-1 btn-modal-insert-value">Inserir valor</button>
+                    </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
     <script src="/scripts/modal.js"></script>
     <script src="/pages/home/valuesData.js"></script>
     <script src="/pages/home/index.js"></script>

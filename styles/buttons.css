@@ -18,14 +18,20 @@
 }
 
 .btn-greylow{
-    color: var(--color-grey-2);
+    font-weight: var(--font-weight-1);
+   font-size: var(--font-size-3);
+   line-height: var(--font-line-height-1);
 }
 
 .btn-greylow:hover{
+    background-color: var(--color-grey-5);
     cursor: pointer;
-    color: var(--color-grey-1);
-    background-color: var(--color-grey-4);
 }
+
+.btn-tag{
+    border-radius: var(--radius-2);
+}
+
 
 .btn-outline{
     border: 1.5px solid var(--color-grey-5);
@@ -39,13 +45,36 @@
 }
 
 
-.btn.icon{
+.btn-icon{
 
+}
+
+.btn-icon:hover{
+    cursor: pointer;
+   }
+
+
+.btn-modal-close{
+    border-radius: var(--radius-2);
+    font-weight: var(--font-weight-1);
+   font-size: var(--font-size-2);
+   line-height: var(--font-line-height-1);
+}
+
+.btn-modal-close:hover{
+    cursor: pointer;
+    background-color: var(--color-grey-4);
 }
 
 @media(max-width: 700px){
     .btn-register-new-value{
         width: 100%;
+    }
+    .btn-modal-cancel{
+        width: 47%;
+    }
+    .btn-modal-insert-value{
+        width: 47%;
     }
 }
 
