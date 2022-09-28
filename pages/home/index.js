@@ -1,4 +1,10 @@
 /* Desenvolva sua lógica aqui */
+let voidListScreen=false // utilizado na lógica de gerar os avisos de não existem items no filtro
+// utilizados na lógica da seleção do tipo de valor do item registrado
+let typeOfEntry = null 
+let ClickBtnEntry = false
+let ClickBtnOut = false
+// --------------------------------------------------------------------
 function createItemList (indexArray, currentFilter){
     let ul = document.querySelector(".list-of-values")
     
@@ -17,7 +23,7 @@ function createItemList (indexArray, currentFilter){
             
             let divItemsButtons = document.createElement("div")
             li.appendChild(divItemsButtons)
-            divItemsButtons.classList = "list-of-values-items-buttons flex"
+            divItemsButtons.classList = "list-of-values-items-buttons flex items-center "
 
                 let buttonEntry = document.createElement("button")
                 divItemsButtons.appendChild(buttonEntry)
@@ -31,7 +37,7 @@ function createItemList (indexArray, currentFilter){
 
                 let buttonDelete = document.createElement("button")
                 divItemsButtons.appendChild(buttonDelete)
-                buttonDelete.classList = "btn-icon"
+                buttonDelete.classList = "btn-icon bg-color-white"
 
                     let imgDelete = document.createElement("img")
                     buttonDelete.appendChild(imgDelete)
@@ -43,10 +49,6 @@ function createItemList (indexArray, currentFilter){
                             
                         })
 }
-
-
-
-let voidListScreen=false // utilizado na lógica de gerar os avisos de não existem items no filtro
 
 function renderArray (dataFilters){
 
@@ -82,9 +84,13 @@ function renderArray (dataFilters){
         
         let ulVoid = document.querySelector(".list-of-values-void")
        
-
+// da para simplificar esse codigo em uma function
             if (dataFilters===0 ){
                 
+                deleteButtonsfilters()
+                createButtonsfilters(dataFilters)
+                createEventFilters()
+
                 if (somValues===0){
                     if (voidListScreen===false){
                         createListVoid ("Sem nenhum valor na categoria Entradas")
@@ -103,6 +109,10 @@ function renderArray (dataFilters){
 
             } else if (dataFilters===1 ){
                
+                deleteButtonsfilters()
+                createButtonsfilters(dataFilters)
+                createEventFilters()
+
                 if (somValues===0){
                     if (voidListScreen===false){
                         createListVoid ("Sem nenhum valor na categoria Saídas")
@@ -120,7 +130,11 @@ function renderArray (dataFilters){
                 }
                 
             } else if (dataFilters===2 ){
-               
+
+                deleteButtonsfilters()
+                createButtonsfilters(dataFilters)
+                createEventFilters()
+
                 if (somValues===0){
                     if (voidListScreen===false){
                         createListVoid ("Nenhum valor cadastrado")
@@ -138,11 +152,7 @@ function renderArray (dataFilters){
                 }
                 
                 
-            }
-        
-
-
-    
+            }  
   
 }
 
@@ -189,16 +199,51 @@ function registerItem (){
     let btnEntry = document.querySelector("#btn-value-type-entry")
     let btnCancel= document.querySelector(".btn-modal-cancel")
     let btnInsertValue= document.querySelector(".btn-modal-insert-value")
-    let typeOfEntry = null
     let newId 
 
+    // Lógica do funcionamente da seleção do tipo de valor do item registrado
+
     btnEntry.addEventListener("click",function(){
-        typeOfEntry = 0
+        
+        if (ClickBtnEntry===false && ClickBtnOut===false){
+            btnEntry.classList.add("btn-outline-activated") 
+            ClickBtnEntry=true
+            typeOfEntry = 0
+        } else if (ClickBtnEntry===true && ClickBtnOut===false){
+            btnEntry.classList.toggle("btn-outline-activated")
+            ClickBtnEntry=false
+            typeOfEntry = null
+        } else if (ClickBtnEntry===false && ClickBtnOut===true){
+            btnEntry.classList.add("btn-outline-activated") 
+            btnOut.classList.toggle("btn-outline-activated")
+            ClickBtnEntry=true
+            ClickBtnOut =false
+            typeOfEntry = 0
+        }
+        
     })
+
     btnOut.addEventListener("click",function(){
-        typeOfEntry = 1
+                
+        if (ClickBtnOut===false && ClickBtnEntry===false ){
+            btnOut.classList.add("btn-outline-activated") 
+            ClickBtnOut=true
+            typeOfEntry = 1
+        } else if (ClickBtnOut===true && ClickBtnEntry===false){
+            btnOut.classList.toggle("btn-outline-activated")
+            ClickBtnOut=false
+            typeOfEntry = null
+        } else if (ClickBtnOut===false && ClickBtnEntry===true){
+            btnOut.classList.add("btn-outline-activated") 
+            btnEntry.classList.toggle("btn-outline-activated")
+            ClickBtnOut =true
+            ClickBtnEntry=false
+            typeOfEntry = 1
+        }
+
     })
     
+    // ------------------------------------------------------------
     btnInsertValue.addEventListener("click", function(){
                
         if (typeOfEntry === null || input.value===null || input.value===""){
@@ -226,9 +271,7 @@ function registerItem (){
             input.value=""
     })
 
-    // insertedValues.push({id:  , value:  , categoryID:})
-    //Number((Number(input.value)).toFixed(2))
-    
+     
 }
 
 function createListVoid (filterText){
@@ -256,15 +299,55 @@ function createListVoid (filterText){
 
 }
 
+function createButtonsfilters (activatedFilter) {
+
+    let section = document.querySelector(".section-financial-summary")
+
+        let divButtons = document.createElement("div")
+        section.appendChild(divButtons)
+        divButtons.classList = "section-financial-summary-buttons flex"
+
+            let btnAll = document.createElement("button")
+            divButtons.appendChild(btnAll)
+            btnAll.classList = "btn-standard text-color-grey-2 bg-color-white btn-outline"
+            btnAll.id = "btn-section-financial-all"
+            btnAll.innerText = "Todos"
+
+            let btnEntries = document.createElement("button")
+            divButtons.appendChild(btnEntries)
+            btnEntries.classList = "btn-standard text-color-grey-2 bg-color-white btn-outline"
+            btnEntries.id = "btn-section-financial-money-entries"
+            btnEntries.innerText = "Entradas"
+
+            let btnOut = document.createElement("button")
+            divButtons.appendChild(btnOut)
+            btnOut.classList = "btn-standard text-color-grey-2 bg-color-white btn-outline"
+            btnOut.id = "btn-section-financial-money-out"
+            btnOut.innerText = "Saídas"
+
+            if(activatedFilter===0){
+                btnEntries.classList.toggle("btn-outline-activated")
+            } else if (activatedFilter===1){
+                btnOut.classList.toggle("btn-outline-activated")
+            } else if (activatedFilter===2){
+                btnAll.classList.toggle("btn-outline-activated")
+            }
+
+}
+
+function deleteButtonsfilters (){
+    let divButtons = document.querySelector(".section-financial-summary-buttons")
+    divButtons.remove()
+}
+
 // ======================================================================
 
 window.addEventListener ("DOMContentLoaded", function(){
     renderArray(2)
-    createEventFilters ()
+    // createButtonsfilters (2) 
+   //createEventFilters () // essa linha vai morrer ao criar os buttons de filtro no DOM
     eventShowCloseModal ()
     registerItem ()
 })
 
 
-// quando for criar o cadastro de items, criar o id da nova entrada a partir do id
-// do ultimo elemento do array e add +1

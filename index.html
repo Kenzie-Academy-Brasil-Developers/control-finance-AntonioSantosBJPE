@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <meta name="description" content="Control Finance - Seu controle financeiro">
     <link rel="stylesheet" href="/styles/flex.css">
-    <link rel="stylesheet" href="/styles/buttons.css">
     <link rel="stylesheet" href="/styles/colors.css">
+    <link rel="stylesheet" href="/styles/buttons.css">
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/modal.css">
     <link rel="stylesheet" href="/styles/globalStyles.css">
@@ -27,10 +27,8 @@
 
         <section class="container section-financial-summary flex justify-between items-center">
             <div class="section-financial-summary-title "><h2>Resumo Financeiro</h2></div>
-            <div class="section-financial-summary-buttons">
-                <button class="btn-standard text-color-grey-2 bg-color-white btn-outline" id="btn-section-financial-all">Todos</button>
-                <button class="btn-standard text-color-grey-2 bg-color-white btn-outline" id="btn-section-financial-money-entries">Entradas</button>
-                <button class="btn-standard text-color-grey-2 bg-color-white btn-outline" id="btn-section-financial-money-out">Saídas</button>
+            <div class="section-financial-summary-buttons flex">
+                
             </div>
         </section>
 
@@ -42,12 +40,7 @@
         <section class="container section-list-of-values">
                     
                 <!-- Criado Via DOM -->    
-            <!-- <div class="container list-of-values-void  ">
-                <div class="list-of-values-void-body flex flex-col justify-around items-center">
-                    <h3 class="list-of-values-void-body-title-up"></h3>
-                    <h4 class="list-of-values-void-body-title-down">Registrar novo valor</h4>
-                </div>
-            </div> -->
+         
         </section>
 
 
@@ -72,8 +65,8 @@
                     </div>
                     <div class="modal-value-type flex items-center">
                         <h4 class="modal-value-type-title">Tipo de Valor</h4>
-                        <button class="btn-standard text-color-grey-2 bg-color-white btn-outline" id="btn-value-type-entry">Entrada</button>
-                        <button class="btn-standard text-color-grey-2 bg-color-white btn-outline" id="btn-value-type-out">Saída</button>
+                        <button class="btn-standard text-color-grey-2 bg-color-white btn-outline " id="btn-value-type-entry">Entrada</button>
+                        <button class="btn-standard text-color-grey-2 bg-color-white btn-outline " id="btn-value-type-out">Saída</button>
                     </div> 
                     <div class="modal-buttons flex justify-end">
                         <button class="btn-standard text-color-grey-2 bg-color-grey-4 btn-greylow btn-modal-cancel">Cancelar</button>
