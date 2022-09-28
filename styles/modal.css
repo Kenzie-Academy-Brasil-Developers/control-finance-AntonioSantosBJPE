@@ -1,17 +1,14 @@
 .modal-wrap-app{
-    
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
     margin: 0 auto;
     display: none;
     align-items: center;
     justify-content: center;
     background-color: var(--color-grey-1-opacity-5);
-
 }
 
 .modal-register-new-value{
@@ -21,53 +18,19 @@
     max-height: 70%;
     background-color: var(--fixed-white);
     border-radius: var(--radius-1);
-    animation: animateModal 1s;
-}
-
-.modal-header{
-
+    animation: animateModal 1s;  
 }
 
 .modal.container{
     width: 90%;
     height: 90%;
 }
-    .modal-header-title{
-        font-size: var(--font-size-2);
-        font-weight: var(--font-weight-1);
-        line-height: var(--font-line-height-1);
-      
-    }
-.modal-description{
-    font-size: var(--font-size-3);
-    font-weight: var(--font-weight-3);
-    line-height: var(--font-line-height-1);
-}
-
-.modal-input-value{
-
-}
-
-    .modal-input-value-label{
-    font-size: var(--font-size-3);
-    font-weight: var(--font-weight-2);
-    line-height: var(--font-line-height-1);
-    }
-
+   
     .modal-input-value-input{
         width: 85%;
-        /* height: 44px; */
-        /* border: 1.5px solid var(--color-grey-3); */
-        /* border-radius: var(--radius-1); */
         border: none;
         outline: none;
-        font-size: var(--font-size-3);
-        font-weight: var(--font-weight-3);
-        line-height: var(--font-line-height-1);
-        color: var(--color-grey-2);
     }
-
-   
 
     .modal-input-label{
         margin-top: 10px;
@@ -77,21 +40,11 @@
         padding-left: 5%;
         border: 1.5px solid var(--color-grey-3);
         border-radius: var(--radius-1);
-        font-size: var(--font-size-3);
-        font-weight: var(--font-weight-2);
-        line-height: var(--font-line-height-1);
-        color: var(--color-grey-2);
     }
 
 .modal-value-type{
     gap: 10px;
 }
-
-    .modal-value-type-title{
-        font-size: var(--font-size-3);
-        font-weight: var(--font-weight-2);
-        line-height: var(--font-line-height-1);
-    }
 
 .modal-buttons{
     gap:10px;

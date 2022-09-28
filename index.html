@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <meta name="description" content="Control Finance - Seu controle financeiro">
     <link rel="stylesheet" href="/styles/flex.css">
+    <link rel="stylesheet" href="/styles/fontsAndBords.css">
     <link rel="stylesheet" href="/styles/colors.css">
     <link rel="stylesheet" href="/styles/buttons.css">
     <link rel="stylesheet" href="/styles/navbar.css">
@@ -53,22 +54,22 @@
             <div class="modal container flex flex-col justify-around">
                     
                     <div class="modal-header flex justify-between  items-center">
-                        <h3 class="modal-header-title text-color-grey-1">Registro de valor</h3>
+                        <h3 class="modal-header-title text-color-grey-1 font-size-2 font-weight-1 font-line-height-1">Registro de valor</h3>
                         <button class="btn-standard bg-color-grey-5 text-color-grey-2 btn-modal-close" id="btn-modal-close">X</button>
                     </div>
-                    <div class="modal-description text-color-grey-2">
+                    <div class="modal-description text-color-grey-2  font-size-3 font-weight-3 font-line-height-1">
                         <p>Digite o valor e em seguida aperte no botão referente ao tipo do valor </p>
                     </div>
                     <div class="modal-input-value flex flex-col">
-                        <h4 class="modal-input-value-label text-color-grey-">Valor</h4>
+                        <h4 class="modal-input-value-label text-color-grey-1 font-size-3 font-weight-2 font-line-height-1">Valor</h4>
 
-                        <label for="modal-input" class="modal-input-label">
-                            R$ <input class="modal-input-value-input" type="number" id="modal-input" name="modal-input" placeholder="00.00">
+                        <label for="modal-input" class="modal-input-label font-size-3 font-weight-2 font-line-height-1 text-color-grey-2">
+                            R$ <input class="modal-input-value-input font-size-3 font-weight-3 font-line-height-1 text-color-grey-2" type="number" id="modal-input" name="modal-input" placeholder="00.00">
                         </label>
   
                     </div>
                     <div class="modal-value-type flex items-center">
-                        <h4 class="modal-value-type-title">Tipo de Valor</h4>
+                        <h4 class="modal-value-type-title font-size-3 font-weight-2 font-line-height-1 text-color-grey-1">Tipo de Valor</h4>
                         <button class="btn-standard text-color-grey-2 bg-color-white btn-outline " id="btn-value-type-entry">Entrada</button>
                         <button class="btn-standard text-color-grey-2 bg-color-white btn-outline " id="btn-value-type-out">Saída</button>
                     </div> 
@@ -82,7 +83,10 @@
 
     </div>
 
-
+    <script src="/scripts/creates.js"></script>
+    <script src="/scripts/deletes.js"></script>
+    <script src="/scripts/register.js"></script>
+    <script src="/scripts/renderArray.js"></script>
     <script src="/scripts/modal.js"></script>
     <script src="/pages/home/valuesData.js"></script>
     <script src="/pages/home/index.js"></script>

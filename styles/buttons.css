@@ -39,7 +39,7 @@
     border: 1.5px solid var(--color-grey-5);
 }
 
-.btn-outline:hover{
+.btn-outline:hover, .btn-outline:focus {
     cursor: pointer;
     background-color: var(--color-brand-3);
     border: 1.5px solid var(--color-brand-1);
