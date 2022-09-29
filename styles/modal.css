@@ -42,6 +42,15 @@
         border-radius: var(--radius-1);
     }
 
+    .modal-input-value-input::-webkit-outer-spin-button, .modal-input-value-input::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .modal-input-value-input[type=number]{
+        -moz-appearance: textfield;
+    }
+
 .modal-value-type{
     gap: 10px;
 }
