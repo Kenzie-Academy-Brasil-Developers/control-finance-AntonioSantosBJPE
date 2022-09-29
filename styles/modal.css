@@ -19,6 +19,7 @@
     background-color: var(--fixed-white);
     border-radius: var(--radius-1);
     animation: animateModal 1s;  
+    animation: var(--animation-type);
 }
 
 .modal.container{
@@ -30,6 +31,7 @@
         width: 85%;
         border: none;
         outline: none;
+        font-family: var(--font-family-1);
     }
 
     .modal-input-label{
